@@ -1,0 +1,273 @@
+GOOD DAY EVERYONE MY NAME IS DOMINIC DESTINY AND AM HERE TO GIVE AN ARTICLE ON WHAT I HAVE LEARNT SO FAR ON JAVASCRIPT.
+
+
+JavaScript is a versatile and powerful programming language commonly used in web development to
+create interactive and dynamic web pages. This article will cover the essential basics of JavaScript,
+including variables, data types, user input, conditional statements, loops, arrays, objects, and functions.
+
+
+VARIABLE AND PRIMITIVE DATA TYPE
+
+Declaring Variables
+In JavaScript, variables are containers for storing data values. 
+You can declare variables using LET, CONST, or VAR.
+
+VARIABLE TYPES
+
+● typeof ""; – “string”
+● typeof 5; – “number”
+● typeof false; – “boolean”
+● typeof Symbol(); – “symbol”
+● typeof undefined; – “undefined”
+● typeof null; // hmmm, this is not what we expect, it returns “object”!
+
+
+LET is used for variables that can be reassigned.
+CONST is used for variables that cannot be reassigned.
+VAR is an older way to declare variables and is function-scoped.
+
+HERE IS A SIMPLE EXAMPLE
+
+let name = "No Limit";
+const age = 16;
+var isStudent = true;
+
+JAVASCRIPT HAS 7 PRIMITIVES DATA TYPE BUT 5 ARE BEING LISTED BEING HERE
+
+STRING: Text wrapped in quotes either single qoute or doublee but the double is mordenly used.
+NUMBER: Numeric values.
+BOOLEAN: true or false.
+UNDEFINED: A variable that has been declared but not assigned a value.
+NULL: An assignment value that represents no value.
+NAN: Stands for "Not-a-Number," a value representing a computational error.
+
+
+let firstName = "No Limit"; // String
+let score = 15; // Number
+let isActive = true; // Boolean
+let middleName; // Undefined
+let lastName = null; // Null
+let notANumber = NaN; // NaN
+
+
+USER INPUT AND STRINGS
+
+JavaScript can interact with users through prompts and can manipulate strings using various methods.
+To get a user information you are going to use the "promt functio"
+
+let FavoriteFood = prompt("Enter your Favorite Food:");
+console.log("Yummy, " + That's a nice dish + "!");
+
+STRING MANUPLULATION
+
+let sentence = 'He said, "Boxing is fun!"';
+console.log(sentence); // Output: He said, "Boxing is fun!"
+
+
+CONDITIONAL STATEMENT
+Conditional statements allow different code to execute based on different conditions. 
+The primary conditional statements are if, else if, and else and we also have the tinary operator.
+
+let age = 25;
+
+if (age > 30) {
+  console.log("You can come to the party!");
+} else if (age < 25) {
+  console.log("You cannot come to the party");
+} else {
+  console.log("Nice try come again");
+}
+
+BOOLEAN VALUE 
+Booleans represent true or false and are often used in conditional statements.
+
+let isActiveUser = true;
+let isInactiveUser = false;
+
+console.log(2 == "2"); // true (loose equality) This part is trying to tell us that the == just combine the number and the string together is not strict
+console.log(2 === 2); // true (strict equality)
+
+FALSY VALUE
+
+0
+● ""
+● null
+● undefined
+● false
+● NaN (short for not a number)
+
+
+
+MODULUS OPERATOR
+5 % 3 === 2 // true (the remainder when five is divided by 3 is 2)
+let num = prompt("Please enter a whole number");
+if ( num % 2 === 0 ) {
+ console.log("the num variable is even!")
+} else if ( num % 2 === 1) {
+ console.log("the num variable is odd!")
+} else {
+ console.log("Hey! I asked for a whole number!");
+
+
+
+RANDOM NUMBER
+You can generate random numbers using Math.random().
+
+let randomNumber = Math.random();
+console.log(randomNumber);
+
+if (randomNumber > 2.0) {
+  console.log("Greater than 2.0");
+} else {
+  console.log("Less than or equal to 2.0");
+}
+
+
+
+ARRAY 
+Arrays store multiple values in a single variable and offer various methods for manipulation.
+
+
+let food = ["rice", "Beans", "banga soap"];
+console.log(food); // Output: ["rice", "Beans", "Banga Soap"]
+
+food.push("Yam");
+console.log(fruits); // Output: ["rice", "Beans", "Banga Soap", "Yam"] /// THE PUSH IS USED TO ADD AN ARRAY AT THE END OF THE ARRAY.
+
+food.pop();
+console.log(fruits); // Output: ["rice", "Beans", "Banga Soap"] THE POP IS USED TO REMOVE AN ARRAY AT THE END
+
+let food = ["rice","Beans","Banga Soap"];
+food.shift(); // returns 1
+food; // ["Beans","Banga Soap"]
+
+let food = ["rice","Beans","Banga Soap"];
+food.unshift(maize); // returns 1
+food; // ["Maize","Beans","Banga Soap"] 
+
+DELETE
+
+There’s also a delete keyword in JavaScript, which you might think could be used to delete elements in an array. However, 
+this isn’t quite how delete works with arrays. When you use this keyword, the value
+at the index where you delete will simply be replaced by undefined.
+
+let arr = [5, 4, 3, 2];
+delete arr[1];
+arr; // [5, undefined, 3, 2]
+
+SPLICE
+splice allows you to add or remove arrays or do the bboth at the same time. It's like a generealiazer and eventually powerful
+
+let arr2 = [1,2,3,4];
+ar2r.splice(0,1); // returns [1]
+arr2; // [2,3,4]
+
+let sign = ["alpha", "gamma", "delta"]
+sign.splice(1,0,"beta")
+ console.log(sign);
+
+
+
+LENGTH
+length returns how many elements are in the array. This is a property, NOT a function (you can tell because we type length, not length(). As we’ve seen, it can (but is almost never) be used to remove elements/clear an array.
+let arr3 = [1,2,3,4];
+arr3.length; // 4
+arr3[arr.length]; // undefined
+arr3[arr.length-1]; // 4 - this is a nice way to access the last element of an array when you don't know how many elements are inside it.
+
+
+
+SLICE
+slice makes a copy of an array.
+let arr4 = [7, 6, 5, 4, 3, 2];
+arr4.slice(1, 2); // [6]
+arr4.slice(2, 5); // [5, 4, 3]
+arr4.slice(2, 1); // []
+
+
+concat
+concat joins two arrays together.
+let arr5 = [1,2,3];
+let arr6 = [4,5,6];
+let combined = arr5.concat(arr6);
+combined; // [1,2,3,4,5,6]
+
+
+JOIN
+join joins elements of an array into a string separated by whatever you pass in as an argument to join. 
+let arr7 = ["Hello", "World"];
+arr.join(" "); // "Hello World"
+
+let arr8 = ["I", "have", "a", "big", "announcement"];
+arr8.join("! ") + "!"; // "I! have! a! big! announcement!"
+
+
+LOOPS
+Loops are used to execute a block of code multiple times. 
+The most common loops are for and while.
+
+for (initializer; condition; counter) {}
+
+
+initializer – this is where we can declare variables to be used in the loop. We usually declare a variable called i which will serve as a counter variable for the number of times that
+we should loop.
+
+condition – this MUST be an expression that returns true or false. 
+
+counter – this is how we change the variables initialized (typically, either by increasing or decreasing them). We commonly increment variables by 1 using the ++ operator and
+decrement by 1 using --.
+
+EXAMPLE
+for (let i = 0; i < 5; i++) {
+  console.log("Number: " + i);
+}
+
+WHILE LOOP
+let i = 0;
+while (i < 5) {
+ console.log(i);
+ i++;
+
+
+OBEJECTS
+Objects store collections of key-value pairs and are fundamental to JavaScript.
+
+
+let person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 25,
+  greet: function() {
+    console.log("Hello, " + this.firstName);
+  }
+};
+
+
+Functions
+Functions are reusable blocks of code that perform specific tasks. They can be declared using the function keyword or as arrow functions.
+
+Function Declaration
+javascript
+Copy code
+function greet(name) {
+  return "Hello, " + name;
+}
+
+console.log(greet("Alice")); // Output: Hello, Alice
+Arrow Function
+javascript
+Copy code
+const add = (a, b) => a + b;
+console.log(add(5, 3)); // Output: 8
+Conclusion
+Understanding these basic concepts of JavaScript is crucial for building efficient and interactive web applications. 
+By mastering variables, data types, user input, conditional statements, loops, arrays, objects, and functions, you can develop robust and dynamic web applications. 
+Keep practicing and experimenting with these concepts to deepen your understanding and enhance your JavaScript skills.
+
+
+
+
+
+
+
+
